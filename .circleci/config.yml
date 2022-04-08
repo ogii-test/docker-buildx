@@ -28,6 +28,7 @@ jobs:
                     sudo systemctl restart docker
                     sudo docker info
                   EOF
+      - run: docker buildx version
       - run:
           name: Build image (with BuildKit)
           command: |
