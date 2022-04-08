@@ -11,7 +11,7 @@ jobs:
         type: boolean
         default: false
     docker:
-      - image: google/cloud-sdk:380.0.0 #cimg/base:stable #google/cloud-sdk #
+      - image: google/cloud-sdk #google/cloud-sdk:380.0.0 #cimg/base:stable #
     resource_class: small
     steps:
       - setup_remote_docker:
@@ -30,7 +30,7 @@ jobs:
                   EOF
       - run: |
           docker info
-          docker buildx version
+          #docker buildx version
       - run:
           name: Build image (with BuildKit)
           command: |
